@@ -1,0 +1,10 @@
+Explicação do var
+1 passagem do js (olha apenas para declarações)
+Tabela de símbolos
+idade=undefined
+nome=undefined
+2 passagem do js (olha para as ordens de execução)
+idade=18
+nome=undefined
+...
+nome=João

@@ -1,4 +1,14 @@
-
+// //coleções
+// v1 = [] //List <Object> v1 = new ArrayList <>(); não há declaração de tamanho, sempre cresce e diminui dinamicamente
+// console.log(v1.length)
+// v1[0] = 2
+// console.log(v1.length)
+// v1[1] = 'abc'
+// console.log(v1.length)
+// console.log(v1)
+// for(let i = 0; i < v1.length; i++){
+//     console.log(v1[i])
+// }
 
 
 //coerção implícita e explícita

@@ -1,4 +1,59 @@
-// //coleções
+//funções
+//function e arrow function
+// function hello(){
+//     console.log(`Oi`)
+// }
+// hello()
+// //sobrecarga
+// //lembrando em Java
+// // class Calculadora{
+// //     int somar(int a, int b)
+// //         return a + b
+
+// //     int somar(String a, String b)
+// //         return Integer.parseInt(a) + Integer.parseInt(b)
+// // }
+// function hello(nome){
+//     console.log(`Oi ${nome}`)
+// }
+// hello('Maria')
+// //não há sobrecarga em js, apenas redefinição de funções, há comportamentos diferentes por conta da dupla passagem do js
+
+//function soma(a, b){
+//  return a + b}
+// const res = soma(2, 1)
+// console.log(res)
+
+// const dobro = function(n){
+//     return 2 * n
+// }
+// console.log(dobro(6))
+
+// const triplo = function(n = 5){ //nesse caso estamos definindo um valor padrão para parâmetro, caso não seja passado nada, n = 5 
+//     return 3 * n
+// }
+// console.log(triplo())
+// console.log(triplo(10))
+
+//arrow function
+// const falarOi = () => {console.log('oi')} //precisa apenas de parâmetros seta e bloco, guardamos essa arrow func em falarOi nesse caso
+// falarOi()
+// const falarOi = (nome) => {console.log(`Oi, ${nome}`)}
+// falarOi('Maria')
+//ou
+// const falarOi2 = nome => {console.log(`Oi, ${nome}`)}
+// falarOi2('João')
+// falarOi3 = nome => console.log(`Oi, ${nome}`)
+// falaOi3('Johnny')
+
+// const somar = (a, b) => {return a + b}
+// console.log(somar(1, 2))
+//ou
+// const somar2 = (a, b) => a + b
+// console.log(somar(1, 2))
+
+
+//coleções
 // v1 = [] //List <Object> v1 = new ArrayList <>(); não há declaração de tamanho, sempre cresce e diminui dinamicamente
 // console.log(v1.length)
 // v1[0] = 2
@@ -33,7 +88,6 @@
 // console.log(1 === "1") //aqui, o problema do == já não ocorre, ele não faz a coerção implícita
 
 
-
 //parece que os tipos de variáveis mudam
 // let a = 2
 // console.log(typeof(a))
@@ -60,12 +114,14 @@
 // // var c = 3
 // // console.log(c) 
 
+
 // //declarando variáveis
 // let a = 2 //variáveis também funcionam como ponteiros (não trocam de tipos)
 // console.log(a)
 // let passou = true
 // console.log(passou)
 // console.log(typeof(passou))   
+
 
 //declarando constantes
 //se fosse Java...

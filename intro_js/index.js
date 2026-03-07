@@ -1,3 +1,52 @@
+const eAgora = () => {
+    let cont = 1
+    const f1 = () => console.log(cont)
+    cont++
+    const f2 = () => console.log(cont)
+    cont++
+    return {f1, f2}
+}
+const res = eAgora()
+res.f1()
+res.f2() //Closure é montado apenas no final, ou seja, as funções f1 e f2 são montadas com cont = 3.
+
+
+
+
+// function f(idade){
+//     let nome = 'João'
+//     function g(){
+//         console.log(`Meu nome é ${nome} e tenho ${idade} anos`)
+//     }
+//     return g
+// }
+// const res = f(17)
+// res() //Closure nesse caso é a variação nome e idade em conjunto com uma função interna g()
+
+// function f (funcao){
+//     funcao()
+// }
+// function g(){
+//     function outraFuncao(){
+//         console.log('Fui criada por g')
+//         return () => 'A'
+//     }
+//     return outraFuncao()
+// }
+// const res = g()
+// f(res)
+// console.log(res())
+
+// let umaFuncao = function(){
+//     console.log('Fui armazenada em uma variável')
+//     return () => 'oi'
+// } //categoriza uma função como cidadãs de primeira classe (pelo fato de ter sido armazenada em uma variável)
+// umaFuncao()
+// function f(funcao){
+//     console.log(funcao())
+// }
+// f(umaFuncao)
+
 //Listas/vetores/arrays/arranjos
 // const numeros = [1, 2, 3, 4]
 // const res = numeros.reduce((ac, v) => ac + v)

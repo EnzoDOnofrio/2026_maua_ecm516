@@ -1,14 +1,40 @@
-const eAgora = () => {
-    let cont = 1
-    const f1 = () => console.log(cont)
-    cont++
-    const f2 = () => console.log(cont)
-    cont++
-    return {f1, f2}
+//JSON: JavaScript Object Notation
+//Uma pessoa que se chama João e tem 17 anos
+//Uma pessoa se chama Maria, tem 21 anos e mora na Rua B, número 50
+// {} objeto js
+let pessoa = {
+    nome: 'João',
+    idade: 17,
 }
-const res = eAgora()
-res.f1()
-res.f2() //Closure é montado apenas no final, ou seja, as funções f1 e f2 são montadas com cont = 3.
+console.log("Me chamo " + pessoa.nome);
+console.log("Tenho " + pessoa["idade"] + " anos")
+
+const pessoa2 = {
+    nome: 'Maria',
+    idade: 21,
+    endereco: {
+        logradouro: 'Rua B',
+        numero: 50,
+    },
+}
+console.log(pessoa2.endereco.logradouro)
+console.log(pessoa2['endereco']['numero'])
+console.log(pessoa2.endereco['logradouro'])
+console.log(pessoa2['endereco'].numero)
+console.log(pessoa2)
+console.log(pessoa2.endereco)
+
+// const eAgora = () => {
+//     let cont = 1
+//     const f1 = () => console.log(cont)
+//     cont++
+//     const f2 = () => console.log(cont)
+//     cont++
+//     return {f1, f2}
+// }
+// const res = eAgora()
+// res.f1()
+// res.f2() //Closure é montado apenas no final, ou seja, as funções f1 e f2 são montadas com cont = 3.
 
 
 

@@ -6,7 +6,7 @@ app.use(express.json()) //middleware
 //definir um endpoint de POST /eventos
 app.post('/eventos', async function(req, res){
     //extrair o evento da requisição
-    const { evento } = req.body
+    const evento = req.body
     //enviar o evento para ambos os mss de lembretes e observações
     //usando axios
     try{
@@ -20,6 +20,11 @@ app.post('/eventos', async function(req, res){
     }
     catch(e){}
     res.status(200).send( { msg: "ok" } )
+    try{
+        //enviando para consulta
+        await axios.post('http://localhost:6000/eventos', evento)
+    } catch(e) { }
+    res.end()
 })
 
 //colocar o barramento de eventos em funcionamento na porta 10000

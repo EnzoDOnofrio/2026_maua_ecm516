@@ -44,7 +44,8 @@ app.post('/lembretes', async (req, res) => {
 })
 
 app.post('/eventos', (req, res) => {
-    console.log(req.body);
+    const evento = req.body
+    console.log(evento)
     res.status(200).send({ msg: "ok" })
 })
 

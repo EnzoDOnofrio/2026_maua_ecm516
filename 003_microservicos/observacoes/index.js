@@ -1,5 +1,5 @@
-const express = require('express')
 const axios = require('axios')
+const express = require('express')
 const { v4: uuidv4 } = require('uuid')
 const app = express()
 app.use(express.json()) //middleWare
@@ -12,7 +12,7 @@ app.get('/lembretes/:id/observacoes', (req, res) => {
     res.send(observacoePorLembreteId[req.params.id] || [])
 })
 
-app.post('/lembretes/:id/observacoes', (req, res) => {
+app.post('/lembretes/:id/observacoes', async (req, res) => {
     const idObs = uuidv4()
     const { texto } = req.body
     const { id } = req.params
@@ -24,7 +24,7 @@ app.post('/lembretes/:id/observacoes', (req, res) => {
     // Resgata a observacao do ID requerido
     observacoePorLembreteId[id] = observacoeDoLembrete
     //Criando um evento via req http para o Barramento de Eventos
-    axios.post('http://localhost:10000/eventos', {
+    await axios.post('http://localhost:10000/eventos', {
         tipo: "ObervacaoCriada",
         payload: {
             id: idObs,
@@ -36,7 +36,8 @@ app.post('/lembretes/:id/observacoes', (req, res) => {
 })
 
 app.post('/eventos', (req, res) => {
-    console.log(req.body);
+    const evento = req.body
+    console.log(evento);
     res.status(200).send( { msg: "ok" } )
 })
 
